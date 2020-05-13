@@ -5,12 +5,24 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.red,
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal[800],
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                backgroundImage: AssetImage('images/will.jpeg'),
+                radius: 50,
+              ),
+              Text('William Alvis',
+              style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
